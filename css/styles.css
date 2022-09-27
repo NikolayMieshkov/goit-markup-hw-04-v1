@@ -85,7 +85,8 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
-  align-content: center;
+  display: flex;
+  align-items: center;
 }
 .header-nav {
   display: flex;
@@ -127,8 +128,8 @@ ul {
   fill: var(--main-text-color);
 }
 .header-contact-link:hover .icon-mail,
+.header-contact-link:focus .icon-mail,
 .header-contact-link:hover .icon-mobile,
-.header-contact-link:focus .icom-mail,
 .header-contact-link:focus .icon-mobile {
   fill: var(--accent-color);
 }
@@ -176,6 +177,7 @@ ul {
   background-size: cover;
   padding-bottom: 200px;
   text-align: center;
+  margin: 0 auto;
 }
 .hero-title {
   margin-bottom: 30px;
@@ -304,9 +306,9 @@ ul {
 }
 .invite-list {
   display: inline-flex;
+  margin-top: 16px;
 }
 .btn-social {
-  margin-top: 16px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -318,35 +320,43 @@ ul {
   fill: var(--icon-main-color);
   width: 20px;
   height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .btn-social:hover,
 .btn-social:focus,
 .btn-social:active {
   background: var(--accent-color);
 }
-.btn-social:hover .social {
+.btn-social:hover .social,
+.btn-social:focus .social,
+.btn-social:active .social {
   fill: var(--second-text-color);
 }
 
-.btn-social:not(:last-child) {
+.social-list:not(:last-child) {
   margin-right: 10px;
 }
 /* Client section */
 .client-list {
   display: flex;
 }
-.client {
+.client-link {
   width: 170px;
   height: 92px;
   border: 1px solid var(--icon-main-color);
   border-radius: 4px;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 .client:not(:last-child) {
   margin-right: 30px;
 }
-.client:hover {
+.client-link:hover,
+.client-link:focus,
+.client-link:active {
   border: 1px solid var(--accent-color);
 }
 
@@ -355,7 +365,9 @@ ul {
   width: 170px;
   height: 92px;
 }
-.client:hover .icon-client {
+.client-link:hover .icon-client,
+.client-link:focus .icon-client,
+.client-link:active .icon-client {
   fill: var(--accent-color);
 }
 
@@ -482,6 +494,10 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
+  display: flex;
+}
+.invite-list {
+  margin-top: 20px;
 }
 .icon-footer {
   fill: var(--second-text-color);
@@ -499,12 +515,13 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-}
-.btn-footer:not(:last-child) {
+ }
+.social-footer:not(:last-child) {
   margin-right: 10px;
 }
-.btn-footer:hover {
+.btn-footer:hover,
+.btn-footer:focus,
+.btn-footer:active {
   background: var(--accent-color);
 }
 
